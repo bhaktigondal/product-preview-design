@@ -1,19 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Preview Design</title>
+
+    <style>
+        #main-product-image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid rgb(195, 192, 192);
+            border-radius: 20px;
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .product-image {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border: 1px solid rgb(199, 195, 195);
+            border-radius: 10px;
+            margin: 7px;
+            cursor: pointer;
+            padding: 5px;
+
+        }
+
+        .product-images-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
+
 <body>
-    
-    <img src="/images/1.jpg" id="main-product-image"  alt="">
+
+    <img src="/images/1.jpg" id="main-product-image" alt="">
     <div class="product-images-container">
-        <img src="/images/1.jpg" class="product-image" alt="">
-        <img src="/images/2.jpg" class="product-image" alt="">
-        <img src="/images/3.jpg" class="product-image" alt="">
-        <img src="/images/4.jpg" class="product-image" alt="">
-        <img src="/images/5.jpg" class="product-image" alt="">
+        <img src="/images/1.jpg" class="product-image" onclick="changeimage(1)">
+        <img src="/images/2.jpg" class="product-image" onclick="changeimage(2)">
+        <img src="/images/3.jpg" class="product-image" onclick="changeimage(3)">
+        <img src="/images/4.jpg" class="product-image" onclick="changeimage(4)">
+        <img src="/images/5.jpg" class="product-image" onclick="changeimage(5)">
     </div>
+
+
+
+
+
+
+
+    <script>
+        function changeimage(num) {
+            const mainimage = document.getElementById('main-product-image');
+
+            if(num==1){
+                mainimage.src= "1.jpg";
+            }
+            else if (num==2){
+                mainimage.src= "2.jpg";
+            }
+            else if (num==3){
+                mainimage.src= "3.jpg";
+            }
+            else if (num==4){
+                mainimage.src= "4.jpg";
+            }
+            else if (num==5){
+                mainimage.src= "5.jpg";
+            }
+            
+
+        }
+    </script>
 </body>
+
 </html>
