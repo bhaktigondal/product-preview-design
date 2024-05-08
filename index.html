@@ -41,11 +41,11 @@
 
     <img src="/images/1.jpg" id="main-product-image" alt="">
     <div class="product-images-container">
-        <img src="/images/1.jpg" class="product-image" onclick="changeimage(1)">
-        <img src="/images/2.jpg" class="product-image" onclick="changeimage(2)">
-        <img src="/images/3.jpg" class="product-image" onclick="changeimage(3)">
-        <img src="/images/4.jpg" class="product-image" onclick="changeimage(4)">
-        <img src="/images/5.jpg" class="product-image" onclick="changeimage(5)">
+        <img src="/images/1.jpg" class="product-image" onclick="changeimage('/images/1.jpg')">
+        <img src="/images/2.jpg" class="product-image" onclick="changeimage('/images/2.jpg')">
+        <img src="/images/3.jpg" class="product-image" onclick="changeimage('/images/3.jpg')">
+        <img src="/images/4.jpg" class="product-image" onclick="changeimage('/images/4.jpg')">
+        <img src="/images/5.jpg" class="product-image" onclick="changeimage('/images/5.jpg')">
     </div>
 
 
@@ -55,24 +55,12 @@
 
 
     <script>
-        function changeimage(num) {
+        function changeimage(imagename) {
             const mainimage = document.getElementById('main-product-image');
 
-            if(num==1){
-                mainimage.src= "/images/1.jpg";
-            }
-            else if (num==2){
-                mainimage.src= "/images/2.jpg";
-            }
-            else if (num==3){
-                mainimage.src= "/images/3.jpg";
-            }
-            else if (num==4){
-                mainimage.src= "/images/4.jpg";
-            }
-            else if (num==5){
-                mainimage.src= "/images/5.jpg";
-            }
+            
+                mainimage.src= imagename;
+           
             
 
         }
